@@ -1,0 +1,340 @@
+@font-face {
+    font-family: bahnschrif;
+    src: url('../font/bahnschrif.TTF');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body {
+    height: 100%;
+    background-image: url('../img/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-width: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    position: relative;
+    max-width: 150px;
+
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    display: inline-block;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-left: 20px;
+    text-decoration: none;
+    font-family: bahnschrif, 'SemiCondensed';
+}
+
+header ul li a:hover {
+    text-shadow: 0px 0px 3px #fff,0px 0px 5px #fff;
+    color: rgb(231, 231, 231);
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 200px;
+    margin-bottom: 0;
+    margin-left: 0;
+    align-items: center;
+}
+
+.container .title iframe {
+    margin-top: 50px;
+}
+
+.container .title{
+    position: relative;
+    max-width: 600px;
+}
+
+.container .title h3{
+    font-family: bahnschrif, 'SemiCondensed';
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1.5em;
+}
+
+.container-2 {
+    width: 100%;
+    height: 100%;
+}
+
+.azzy {
+    position: fixed;
+    width: 550px;
+}
+
+.dirt {
+
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+.space {
+    padding: 0px 10px 10px 0px;
+}
+
+.copyright{
+    position: absolute;
+    color: #fff;
+    font-family: bahnschrif;
+    font-size: 0.8em;
+    padding-left: 10px;
+    bottom: 0;
+}
+
+.active {
+    text-shadow: 0px 0px 3px #fff,0px 0px 5px #fff;
+}
+
+/* Requerimentos - APLICAR RESPONSIVIDADE*/
+
+.row-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 100%;
+    flex: 1;
+    color: #fff;
+    font-family: bahnschrif;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.8),0px 0px 4px rgba(0, 0, 0, 0.8);
+}
+
+.card-column h1{
+    margin-bottom: 50px;
+    font-size: 1.2em;
+}
+
+.card-column p{
+    font-size: 1.2em;
+    padding-bottom: 20px;
+    color: gray;
+}
+
+.aditional-note {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: bahnschrif;
+    margin-top: 100px;
+}
+
+.aditional-note h2 {
+    color: rgb(224, 3, 3);
+    font-size: 1.2em;
+}
+
+.aditional-note p {
+    font-size: 1em;
+}
+/* Media Query */
+
+@media (max-width:1280px) {
+
+
+}
+
+@media (max-width:1120px) {
+
+    .copyright {
+        position: relative;
+        text-align: center;
+    }
+}
+
+@media (max-width:900px) {
+    header .logo {
+        max-width: 100px;
+    }
+    .menu {
+        display: none;
+    }
+    .one,.two,.three {
+        background-color: #fff;
+        height: 5px;
+        width: 100%;
+        margin: 6px auto;
+        transition-duration: 0.3s;
+    }
+    .menu-toggle {
+        width: 40px;
+        height: 30px;
+        margin-right: 30px;
+    }
+    .menu-section.on {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background-color: black;
+        z-index: 10;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu-section.on .menu {
+        display: block;
+    }
+    .menu-section.on .menu-toggle {
+        position: absolute;
+        right: 0;
+        top: 15px;
+    }
+    .menu-section.on .menu-toggle .one{
+        transform: rotate(45deg) translate(7px,7px);
+    }
+    .menu-section.on .menu-toggle .two{
+        opacity: 0;
+    }
+    .menu-section.on .menu-toggle .three{
+        transform: rotate(-45deg) translate(8px,-9px);
+    }
+    .sec .menu-section.on ul {
+        text-align: center;
+        display: block;
+    }
+    .sec .menu-section.on ul a{
+        transition-duration: 0.5s;
+        line-height: 5rem;
+    }  
+    .container .title{
+        width: 200px;
+        font-size: 0.4em;
+    }
+    .container .title img{
+        width: 300px;
+        font-size: 0.4em;
+    }
+    section {
+        position: relative;
+        width: 100%;
+        min-width: 100vw;
+        padding: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }  
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 0px 0px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .container .title iframe {
+        left: 0;
+        padding: 0;
+        width: 300px; 
+        height: 300px;
+    }
+    .container .title h3{
+        font-family: bahnschrif, 'SemiCondensed';
+        color: #fff;
+        font-size: 0.55rem;
+        line-height: 1.5em;
+    }
+    .row-card{
+        align-items: center;
+        flex-direction: column;
+        margin-top: 100px;
+    }
+    .card-column {
+        width: 300px;
+        margin-top: 30px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 1rem;
+    }
+    .card-column p {
+        text-align: center;
+        font-size: 0.9em;
+    }
+    .card-column h1 {
+        border-radius: 1rem 1rem 0 0 ;
+        padding: 10px;
+        width: 100%;
+        background-color: black;
+        text-align: center;
+        font-size: 1.2em;
+        margin: 0 0 15px 0;
+    }
+    .card-column h2 {
+        text-align: center;
+        font-size: 1em;
+    }
+    .aditional-note {
+        margin: 50px 0 50px 0;
+        text-align: center;
+    }  
+    .aditional-note h2 {
+        font-size: 0.9em;
+    }   
+    .aditional-note p {
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width:320px){
+    section {
+        position: relative;
+        width: 100%;
+        min-width: 100vw;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
